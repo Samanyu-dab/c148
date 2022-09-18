@@ -16,8 +16,14 @@
 
             </a-assets>
             <a-sky src="#bg"></a-sky>
+        
             <!--light in the scene-->
-
+            <!--ambient-->
+                <a-entity light="type:ambient;intensity:0.5"></a-entity>
+            <!--directional-->
+                <a-entity animation="property:rotation;to:0 360 0;easing:linear;loop:true;dur:60000">
+                <a-entity light="type:directional;castshadow:true;intensity:1;distance:50;decay:2;color:yellow";position="-100 18 20 "></a-entity>
+                </a-entity>
             <!--cirular plane-->
             <a-circle position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive:true" visible="true" color="#2e6f10"></a-circle>
             <!--gltf modals-->
